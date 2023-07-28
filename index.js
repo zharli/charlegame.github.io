@@ -53,7 +53,7 @@ let objectJ = true;
 
 let score = 1;
 
-let speed = 0;
+let speed = 1;
 let speedY = 10;
 
 function drawGame() {
@@ -394,18 +394,46 @@ setInterval(function bugs(){
 playBtn.addEventListener('click', () => {
     pauseBtn.disabled = false;
     playBtn.disabled = true;
-    restartBtn.disabled = true;
+    restartBtn.disabled = false;
+    speed = 2;
+    speedY = 10;
     drawGame();
   });
   
   pauseBtn.addEventListener('click', () => {
     playBtn.disabled = false;
     pauseBtn.disabled = true;
-    restartBtn.disabled = false;
+    speed = 0;
+    speedY = 0;
   });
 
   restartBtn.addEventListener('click', () => {
     playBtn.disabled = false;
     pauseBtn.disabled = true;
+    speed = 0;
+    x = 50;
+    y = 300;
+    xa = 700;
+    ya = 375;
+    xb = 900;
+    yb = 275;
+    xc = 1100;
+    yc = 475;
+    xd = 1300;
+    yd = 550;
+    xe = 1500;
+    ye = 500;
+    xf = 700;
+    yf = 0;
+    xg = 900;
+    yg = 0;
+    xh = 1100;
+    yh = 0;
+    xi = 1300;
+    yi = 0;  
+    xj = 1500;
+    yj = 0; 
+    
+    score = 1;
   });
 
