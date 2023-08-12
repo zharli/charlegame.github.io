@@ -391,6 +391,22 @@ setInterval(function bugs(){
     }
 })
 
+document.addEventListener('mousemove', (event) => {
+    mousePos = { x: event.clientX, y: event.clientY };
+    if (mousePos.x >= 300){
+        x = x + speed; 
+    }
+    if (mousePos.y <= 250){
+        y = y - speedY; 
+    }
+    if (mousePos.x <= 300){
+        x = x - speed; 
+    }
+    if (mousePos.y >= 550){
+        y = y + speedY; 
+    }
+  });
+
 playBtn.addEventListener('click', () => {
     pauseBtn.disabled = false;
     playBtn.disabled = true;
